@@ -141,3 +141,96 @@
   text-align: center;
 }
 
+.algorithm-info-box {
+
+  border-radius: 15px;
+  backdrop-filter: blur(20px);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.algorithm-info-box h3 {
+  color: #2c3e50;
+  text-align: center;
+  
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.priority-list {
+  display: flex;
+  flex-direction: column;
+  
+  gap: 20px;
+}
+
+.priority-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 15px;
+  background: transparent;
+ 
+  border-radius: 20px;
+  transition: transform 0.2s ease;
+}
+
+.priority-item:hover {
+  transform: translateX(5px);
+}
+
+.priority-number {
+  background: #3498db;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.priority-content {
+  flex: 1;
+}
+
+.priority-content h4 {
+  color: #2c3e50;
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+}
+
+.priority-content p {
+  color: #34495e;
+  margin: 0;
+  font-size: 0.95em;
+}
+
+.priority-content ul {
+  margin: 5px 0 0 0;
+  padding-left: 20px;
+  color: #34495e;
+  font-size: 0.95em;
+}
+
+.priority-content li {
+  margin: 5px 0;
+}
+
+/* Color-code each priority */
+.priority-item:nth-child(1) .priority-number {
+  background: #e74c3c; /* Red for highest priority */
+}
+
+.priority-item:nth-child(2) .priority-number {
+  background: #f39c12; /* Orange for second priority */
+}
+
+.priority-item:nth-child(3) .priority-number {
+  background: #2ecc71; /* Green for third priority */
+}
+

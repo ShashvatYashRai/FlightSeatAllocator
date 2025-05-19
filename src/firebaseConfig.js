@@ -1,15 +1,22 @@
+// Import the functions you need from the SDKs
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getAnalytics } from "firebase/analytics";
+import { getFirestore } from "firebase/firestore"; // ✅ Add this
 
+// Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCVTspmYB2iBfkxxQjQT3OSIVDGaw17qEI",
-  authDomain: "flight-seat-allocating-system.firebaseapp.com",
-  projectId: "flight-seat-allocating-system",
-  storageBucket: "flight-seat-allocating-system.appspot.com",
-  messagingSenderId: "610577932692",
-  appId: "1:610577932692:web:f7206acb3bf45a6d8faf81",
-  measurementId: "G-K0NHD08KBL"
+  apiKey: "AIzaSyC8Uu4-s-wAET5AKvQSw4fEFShFokkdJ34",
+  authDomain: "flight-seat-allocator.firebaseapp.com",
+  projectId: "flight-seat-allocator",
+  storageBucket: "flight-seat-allocator.firebasestorage.app",
+  messagingSenderId: "708235761526",
+  appId: "1:708235761526:web:1ff3705c2cd452e527cc57",
+  measurementId: "G-40DLZWGFQ1"
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
+const analytics = getAnalytics(app);
+const db = getFirestore(app); // ✅ Add this
+
+export { db }; // ✅ Export this so you can use it in your component
